@@ -2,15 +2,15 @@
 class Punkt
 {
 public:
+	Punkt();
 	Punkt(const Punkt& p);
-	Punkt(double x, double y);
+	Punkt(int x, int y);
 	~Punkt();
-	double getX();
-	void setX(double x);
-	void setY(double y);
-	double getY();
+	void printWsp();
+	int getX();
+	int getY();
 private:
-	double x;
-	double y;
+	int* x;
+	int* y;
 };
 

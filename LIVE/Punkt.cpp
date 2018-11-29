@@ -1,7 +1,12 @@
 #include "stdafx.h"
 #include "Punkt.h"
+#include <iostream>
 
-
+Punkt::Punkt()
+{
+	x = new int;
+	y = new int;
+}
 Punkt::Punkt(const Punkt& p)
 {
 	x = p.x;
@@ -9,10 +14,10 @@ Punkt::Punkt(const Punkt& p)
 
 }
 
-Punkt::Punkt(double x, double y)
+Punkt::Punkt(int a, int b)
 {
-	this->x = x;
-	this->y = y;
+	x = new int(a);
+	y = new int(b);
 }
 
 
@@ -21,22 +26,18 @@ Punkt::~Punkt()
 {
 }
 
-double Punkt::getX()
+void Punkt::printWsp()
 {
-	return x;
+	std::cout << "(" << *x << "," << *y << ")" << std::endl;
 }
 
-double Punkt::getY()
+int Punkt::getX()
 {
-	return y;
+	return *x;
 }
 
-void Punkt::setX(double x)
+int Punkt::getY()
 {
-	this->x = x;
+	return *y;
 }
 
-void Punkt::setY(double y)
-{
-	this->y = y;
-}
